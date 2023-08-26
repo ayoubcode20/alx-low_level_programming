@@ -20,7 +20,7 @@ void times_table(void)
 			putchar(',');
 			putchar(' ');
 
-			prod = num * mult
+			prod = num * mult;
 
 			/**
 			 * put space if product is a single number
