@@ -5,8 +5,6 @@
  *
  * @n: is the number of times the _ character
  * should be printed
- *
- * Return: nothing
 */
 
 void print_line(int n)
@@ -17,7 +15,7 @@ void print_line(int n)
 		putchar('\n');
 	else
 	{
-		for (count = 0; count <= n; count++)
+		for (count = 1; count <= n; count++)
 			putchar('_');
 		putchar('\n');
 	}
