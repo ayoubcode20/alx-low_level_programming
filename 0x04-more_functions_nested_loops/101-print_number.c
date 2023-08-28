@@ -8,19 +8,19 @@
 
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int nm = n;
 
 	/* first check if It's negative */
 	if (n < 0)
 	{
 		putchar('-');
-		num = -num;
+		nm = -nm;
 	}
 
 	/* print the first few digits */
-	if ((num / 10) > 0)
-		print_number(num / 10);
+	if ((nm / 10) > 0)
+		print_number(nm / 10);
 
 	/* print the last digit */
-	putchar((num % 10) + 48);
+	putchar((nm % 10) + 48);
 }
