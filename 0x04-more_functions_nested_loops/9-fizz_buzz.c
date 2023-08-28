@@ -19,11 +19,11 @@ int main(void)
 		else if (count % 5 == 0 && !(count % 3 == 0))
 			printf("Buzz");
 		else if (count % 5 == 0 && count % 3 == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else
 			printf("%d", count);
 
-		if (num != 100)
+		if (count != 100)
 			printf(" ");
 		else
 			printf("\n");
