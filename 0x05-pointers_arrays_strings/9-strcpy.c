@@ -11,14 +11,15 @@
 
 char *_strcpy(char *dest, char *src)
 {
-        int i = 0; // Initialize i to 0
+        int i = 0;
 
-        while (src[i] != '\0') { // Use a while loop to copy the string
+        while (src[i] != '\0') 
+	{
                 dest[i] = src[i];
                 i++;
         }
 
-        dest[i] = '\0'; // Add the null-terminator to the destination string
+        dest[i] = '\0';
 
-        return dest;
+        return (dest);
 }
