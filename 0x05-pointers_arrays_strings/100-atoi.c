@@ -1,11 +1,11 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * _atoi - Converts a string to an integer.
  * @s: The input string.
  * Return: The integer value of the input string.
-*/
-
+ */
 int _atoi(char *s)
 {
     int result = 0;
@@ -32,8 +32,8 @@ int _atoi(char *s)
         }
 
         result = result * 10 + (*s - '0');
-        s++;
+	s++;
     }
-
+ 
     return result * sign;
 }
