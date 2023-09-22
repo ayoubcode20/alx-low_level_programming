@@ -14,12 +14,9 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		if (i == 9)
-		{
-			putchar(i + '0');
-			continue;
-		}
 		putchar(i + '0');
+		if (i == 9)
+			continue;
 		putchar(',');
 		putchar(' ');
 	}
