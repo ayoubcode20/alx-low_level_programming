@@ -13,7 +13,7 @@ long long largest_prime_factor(long long n)
 {
 	long long count = 2;
 
-	while (n > 0)
+	while (n > 1)
 	{
 		if (n % count == 0)
 			n /= count;
