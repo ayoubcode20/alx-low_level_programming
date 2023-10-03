@@ -11,9 +11,9 @@
 int isdelimiter(char ch)
 {
 	int i;
-	char delimiters[] = " \t\n,.!?\"(){}";
+	char delimiters[] = " \t\n,;.!?\"(){}";
 
-	for (i = 0; i < 12; i++)
+	for (i = 0; i < 13; i++)
 		if (ch == delimiters[i])
 			return (1);
 	return (0);
@@ -30,12 +30,13 @@ int isdelimiter(char ch)
 char *cap_string(char *s)
 {
 	int i;
+	char *p = s;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; p[i] != '\0'; i++)
 	{
-		if (isdelimiter(s[i]) && s[i + 1] >= 97 && s[i + 1] <= 122)
-			s[i + 1] -= 32;
+		if (isdelimiter(p[i]) && (p[i + 1] >= 97 && p[i + 1] <= 122))
+			p[i + 1] -= 32;
 	}
 
-	return (s);
+	return (p);
 }
