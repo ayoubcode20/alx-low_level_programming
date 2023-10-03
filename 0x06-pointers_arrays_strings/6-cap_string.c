@@ -32,10 +32,10 @@ char *cap_string(char *s)
 	int i;
 	char *p = s;
 
-	for (i = 0; p[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (isdelimiter(p[i]) && (p[i + 1] >= 97 && p[i + 1] <= 122))
-			p[i + 1] -= 32;
+		if (isdelimiter(s[i]) && (s[i + 1] >= 97 && s[i + 1] <= 122))
+			s[i + 1] -= 32;
 	}
 
 	return (p);
