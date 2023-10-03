@@ -32,6 +32,8 @@ char *cap_string(char *s)
 	int i;
 	char *p = s;
 
+	if (s[0] >= 97 && s[0] <= 122)
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (isdelimiter(s[i]) && (s[i + 1] >= 97 && s[i + 1] <= 122))
