@@ -11,9 +11,9 @@
 int isdelimiter(char ch)
 {
 	int i;
-	char delimiters[] = " \t\n,;.!?\"(){}";
+	char delimiters[] = " \t\n,.!?\"(){}";
 
-	for (i = 0; i < 13; i++)
+	for (i = 0; i < 12; i++)
 		if (ch == delimiters[i])
 			return (1);
 	return (0);
