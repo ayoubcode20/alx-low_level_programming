@@ -13,9 +13,9 @@ int h_sqrt_recursion(int n, int num)
 {
 	if (n * n == num)
 		return (n);
-	else if (n <= 0)
+	else if (n * n > num)
 		return (-1);
-	return (h_sqrt_recursion(n - 1, num));
+	return (h_sqrt_recursion(n + 1, num));
 }
 
 /**
@@ -29,5 +29,9 @@ int h_sqrt_recursion(int n, int num)
 
 int _sqrt_recursion(int n)
 {
-	return (h_sqrt_recursion(n, n));
+	if (n < 0)
+		return (-1);
+	if (n == 0 || n == 1)
+		return (n);
+	return (h_sqrt_recursion(1, n));
 }
