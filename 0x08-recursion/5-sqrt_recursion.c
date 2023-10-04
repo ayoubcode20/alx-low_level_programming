@@ -15,7 +15,7 @@ int h_sqrt_recursion(int n, int num)
 		return (n);
 	else if (n <= 0)
 		return (-1);
-	h_sqrt_recursion(n - 1, num);
+	return (h_sqrt_recursion(n - 1, num));
 }
 
 /**
