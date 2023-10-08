@@ -48,10 +48,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; i < _strlen(s1); i++)
 		ptr[i] = s1[i];
 
-	for (i = _strlen(s1); i < _strlen(s1) + _strlen(s2); i++)
+	for (j = 0; j < n ; j++)
 	{
 		ptr[i] = s2[j];
-		j++;
+		i++;
 	}
 
 	ptr[i] = '\0';
