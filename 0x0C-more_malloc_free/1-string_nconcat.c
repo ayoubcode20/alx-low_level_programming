@@ -12,8 +12,8 @@ int _strlen(char *s)
 {
 	int counter;
 
-	for (counter = 0; *s != '\0'; s++)
-		counter++;
+	for (counter = 0; s[counter] != '\0'; counter++)
+		;
 
 	return (counter);
 }
@@ -53,6 +53,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		ptr[i] = s2[j];
 		j++;
 	}
+
+	ptr[i] = '\0';
 
 	return (ptr);
 }
