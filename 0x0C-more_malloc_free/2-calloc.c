@@ -1,6 +1,25 @@
 #include "main.h"
 
 /**
+ * _memset - sets memory to zero
+ *
+ * @ptr: a pointer to the memory
+ * @value: an integer (0)
+ * @size: the size of the memory
+ *
+ * Return: nothing
+*/
+
+void _memset(void *ptr, int value, unsigned int size)
+{
+	unsigned int i;
+	unsigned char *p = (unsigned char *)ptr;
+
+	for (i = 0; i < size; i++)
+		p[i] = (unsigned char)value;
+}
+
+/**
  * _calloc - allocates memory for an array, using malloc
  *
  * @nmemb: number of elements
@@ -22,7 +41,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 
-	memset(ptr, 0, nmemb * size);
+	_memset(ptr, 0, size);
 
 	return (ptr);
 }
