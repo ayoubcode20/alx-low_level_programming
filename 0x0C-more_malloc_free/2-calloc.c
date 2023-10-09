@@ -10,10 +10,13 @@
  * Return: nothing
 */
 
-void *_memset(char *ptr, char value, unsigned int size)
+char *_memset(char *ptr, char value, unsigned int size)
 {
+	char *s = ptr;
+
 	while (size--)
-		*ptr++ = value;
+		*s++ = value;
+	return (s);
 }
 
 /**
