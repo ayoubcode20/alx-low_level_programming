@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - sets memory to zero
+ * *_memset - sets memory to zero
  *
  * @ptr: a pointer to the memory
  * @value: an integer (0)
@@ -15,7 +15,7 @@ char *_memset(char *ptr, char value, unsigned int size)
 	char *s = ptr;
 
 	while (size--)
-		*s++ = value;
+		*ptr++ = value;
 	return (s);
 }
 
