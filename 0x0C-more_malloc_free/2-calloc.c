@@ -12,12 +12,10 @@
 
 char *_memset(char *ptr, char value, unsigned int size)
 {
-	char *s = ptr;
-
 	while (size--)
-		*s++ = value;
+		*ptr++ = value;
 
-	return (s);
+	return (ptr);
 }
 
 /**
