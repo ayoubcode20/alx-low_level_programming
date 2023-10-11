@@ -16,13 +16,14 @@ int main(int argc, char **argv)
 	if (argc != 4)
 		printf("Error\n"), exit(98);
 
-	if (get_op_func(argv[2]) == NULL)
-		printf("Error\n"), exit(99);
-
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	if ((argv[2][0] == "/" || argv[2][0] == "%") && !b)
+	ptr = get_op_func(argv[2]);
+	if (!ptr)
+		printf("Error\n"), exit(99);
+
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && !b)
 		printf("Error\n"), exit(100);
 
 	printf("%d\n", ptr(a, b));
