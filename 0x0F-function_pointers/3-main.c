@@ -11,29 +11,21 @@
 
 int main(int argc, char **argv)
 {
-	int res;
-	int (*ptr)(int, int)
+	int (*ptr)(int, int), a, b;
 
-	if (argc > 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
+	if (argc != 4)
+		printf("Error\n"), exit(98);
+
 	if (get_op_func(argv[2]) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-	if ((argv[2] == "/" || argv[2] == "%") && argv[3] == "0")
-	{
-		printf("Error\n");
-		exit(100);
-	}
+		printf("Error\n"), exit(99);
 
-	ptr = get_op_func(argv[2]);
-	res = ptr(atoi(argc[1]), atoi(argc[3]));
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
 
-	printf("%d\n", res);
+	if ((argv[2][0] == "/" || argv[2][0] == "%") && !b)
+		printf("Error\n"), exit(100);
+
+	printf("%d\n", ptr(a, b));
 
 	return (0);
 }
