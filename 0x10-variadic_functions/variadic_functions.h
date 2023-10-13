@@ -4,6 +4,18 @@
 #include <stdio.h>
 #include <stdarg.h>
 
+/**
+ * struct token - struct token
+ *
+ * @ch: format
+ * @f: The function assoited
+*/
+typedef struct token
+{
+	char *ch;
+	void (*f)(char *, va_list);
+} _tokens;
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
