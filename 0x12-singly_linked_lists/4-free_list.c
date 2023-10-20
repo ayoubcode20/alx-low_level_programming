@@ -10,6 +10,8 @@
 
 void free_list(list_t *head)
 {
+	if (!head)
+		return;
 	list_t *temp = head;
 
 	temp = temp->next;
