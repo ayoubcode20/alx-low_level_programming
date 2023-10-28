@@ -7,7 +7,13 @@
  */
 int main(void)
 {
-	print_binary(7412);
+	int n;
 
-	return 1;
+    n = get_bit(12, 3);
+    printf("%d\n", n);
+    n = get_bit(9, 0);
+    printf("%d\n", n);
+    n = get_bit(64, 238934100);
+    printf("%d\n", n);
+    return (0);
 }
