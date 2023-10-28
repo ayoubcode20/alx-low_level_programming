@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	print_binary(0);
+	print_binary(1239);
 
 	return 1;
 }

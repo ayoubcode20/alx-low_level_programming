@@ -13,12 +13,15 @@ void print_binary(unsigned long int n)
 
 	if (!n)
 		_putchar('0');
-	for (i = 31; i >= 0; i--)
+	else
 	{
-		bit = (n >> i) & 1;
-		if (bit)
-			set = 1;
-		if (set)
-			_putchar(bit + 48);
+		for (i = 31; i >= 0; i--)
+		{
+			bit = (n >> i) & 1;
+			if (bit)
+				set = 1;
+			if (set)
+				_putchar(bit + 48);
+		}
 	}
 }
