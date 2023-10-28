@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	else
 	{
-		for (i = 31; i >= 0; i--)
+		for (i = sizeof(unsigned long int) * 8; i >= 0; i--)
 		{
 			bit = (n >> i) & 1;
 			if (bit)
