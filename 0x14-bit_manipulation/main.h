@@ -3,8 +3,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
-int _putchar(char c);
+int _putchar(int c);
 unsigned int _pow(unsigned int, unsigned int);
 unsigned int _strlen(const char *s);
 unsigned int binary_to_uint(const char *b);
