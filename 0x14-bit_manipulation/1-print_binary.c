@@ -10,12 +10,13 @@
 void print_binary(unsigned long int n)
 {
 	int i, set = 0, bit;
+	int num_bits = sizeof(unsigned long int) * 8;
 
 	if (!n)
 		_putchar('0');
 	else
 	{
-		for (i = sizeof(unsigned long int) * 8; i >= 0; i--)
+		for (i = num_bits - 1; i >= 0; i--)
 		{
 			bit = (n >> i) & 1;
 			if (bit)
