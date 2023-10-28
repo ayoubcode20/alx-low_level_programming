@@ -11,6 +11,8 @@ void print_binary(unsigned long int n)
 {
 	int i, set = 0, bit;
 
+	if (!n)
+		_putchar('0');
 	for (i = 31; i >= 0; i--)
 	{
 		bit = (n >> i) & 1;
@@ -19,5 +21,4 @@ void print_binary(unsigned long int n)
 		if (set)
 			_putchar(bit + 48);
 	}
-	_putchar('\n');
 }
