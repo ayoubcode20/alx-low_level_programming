@@ -7,9 +7,11 @@
 */
 int get_endianness(void)
 {
-	short int ch = 65;
+	uint32_t num = 1;
+	uint8_t *byte = (uint8_t *)&num;
 
-	if (ch & 1 == 0)
+	if (*byte == 1)
+		return (1);
+	else
 		return (0);
-	return (1);
 }
