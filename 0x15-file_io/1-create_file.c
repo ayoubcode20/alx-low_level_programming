@@ -11,11 +11,11 @@ int _strlen(char *s)
 {
 	int i = 0;
 
-	while (*s)
-	{
-		s++;
+	if (!s)
+		return (0);
+
+	while (*s++)
 		i++;
-	}
 	return (i);
 }
 
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 {
 	if (!filename)
 		return (-1);
-	int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
 	if (fd == -1)
 		return (-1);
