@@ -28,23 +28,24 @@ int _strlen(char *s)
 */
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	int len = _strlen(text_content);
-	char *buff = malloc(sizeof(char) * len);
+	if (!filename)
+		return (-1);
+	int fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
-	if (!filename || !buff)
-		return (-1);
-	if (!text_content)
-		free(buff)
-	else
-		buff = text_content;
-	fd = open(filename, O_WDONLY);
-	if (fd == -1)
-		fd = open(filename, O_WDONLY | O_CREAT, 0600);
 	if (fd == -1)
 		return (-1);
-	if (buff)
-		write(fd, buff, len);
+	int len;
+
+	if (text_content)
+	{
+		len = _strlen(text_content);
+		if (write(fd, text_content, len) == -1)
+		{
+			close(fd);
+			return (-1);
+		}
+	}
+
 	close(fd);
 	return (1);
 }
